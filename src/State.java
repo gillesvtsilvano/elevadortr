@@ -2,7 +2,8 @@
 public enum State {
 	None,
 	Stopped,
-	Moving,
+	MovingUp,
+	MovingDown,
 	DoorOpen,
 	DoorClosed
 }

@@ -46,5 +46,5 @@ public enum Event {
 	SensorFloorF9,
 	SensorDoorNone,
 	SensorDoorClose,
-	SensorDoorOpen
+	SensorDoorOpen,
 }

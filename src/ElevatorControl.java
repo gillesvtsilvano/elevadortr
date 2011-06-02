@@ -1,26 +1,33 @@
+import java.lang.reflect.Array;
+import java.util.Queue;
+
 
 
 public class ElevatorControl implements ElevatorControlInterface {
-
-	private Event doorBtUp;
-	private Event doorBtDown;
-	private Event elevatorBt;
-	private Event floorSensor;
-	private State elevatorState;
+	
+	private boolean running;
+	private Array floorIn1;
+	private Array floorIn2;
+	private Array floorOut;
 	
 	public ElevatorControl(){
-		this.doorBtUp = Event.ButtonRequestUpNone;
-		this.doorBtDown = Event.ButtonRequestDownNone;
-		this.elevatorBt = Event.ButtonSelectDestinyNone;
-		this.floorSensor = Event.SensorFloorNone;
-		this.elevatorState = State.Stopped;
-	}
-	
-	public void processEvent(Event in, Event out) {
-		
+
 	}
 
-	public State currentState(){
-		return elevatorState;
+	public void run(){
+		this.running = true;
+		
+		while (running){
+			processEvent();
+		}
+	}
+	
+	public int schedule(){
+		
+		return 0;
+	}
+	
+	public void processEvent() {
+		
 	}
 }
